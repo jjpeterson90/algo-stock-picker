@@ -1,9 +1,7 @@
 exports.picker = function(prices) {
 
-    let initialBuy = prices[0]
-    let initialSell = prices[1]
     let initialDifference = prices[1]-prices[0]
-    let bestDifference = [initialDifference, initialBuy, initialSell];  // [diff_value, buyIndex, sellIndex]
+    let bestDifference = [initialDifference, 0, 1];  // [diff_value, buyIndex, sellIndex]
 
     prices.forEach((buy,buyIndex) => {  // buy loop
         prices.forEach((sell,sellIndex) => {  // sell loop
